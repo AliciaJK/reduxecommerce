@@ -14,6 +14,16 @@ const server = new ApolloServer({
   context: authMiddleware
 });
 
+// mongoose.connect(
+//   process.env.MONGO_URI || 'mongodb://localhost/Redux-eCommerce',
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useCreateIndex: true,
+//     useFindAndModify: false,
+//   }
+//   );
+
 server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: false }));
